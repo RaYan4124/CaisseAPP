@@ -68,5 +68,10 @@ namespace CaisseApp_MVVM.View
             }
         }
 
+        private void Sub_Total(object sender, RoutedEventArgs e)
+        {
+            pvm.Add_SubTotal();
+        }
+
     }
 }

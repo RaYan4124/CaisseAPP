@@ -6,6 +6,7 @@ using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Windows.Controls;
 
 namespace CaisseApp_MVVM.ViewModels;
 
@@ -15,7 +16,6 @@ public class ProductViewModel : INotifyPropertyChanged
     private DB_Helper _db_helper = new DB_Helper();
 
     private ObservableCollection<Product> _products = new ObservableCollection<Product>();
-
     public ObservableCollection<Product> Products
     {
         get { return _products; }
@@ -71,6 +71,18 @@ public class ProductViewModel : INotifyPropertyChanged
         }
 
         OnPropertyChanged(nameof(TotalPrice));
+    }
+
+    public void Add_SubTotal()
+    {
+        if (_products.Count == 0)
+        {
+            MessageBox.Show("Panier Vide !");
+            return;
+        }
+        int SubTotal = Products.Sum(p => p.Price);
+        Products.Add(new Product(0, "Sous-Total", SubTotal));
+        OnPropertyChanged(nameof(Products));
     }
 
     public event PropertyChangedEventHandler? PropertyChanged;
