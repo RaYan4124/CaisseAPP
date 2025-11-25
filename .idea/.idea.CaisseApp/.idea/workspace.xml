@@ -7,13 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ce2f011-b4d8-408c-9832-c983f8e9d1ae" name="Changes" comment="UI Amelioration">
-      <change afterPath="$PROJECT_DIR$/CaisseApp_MVVM/View/ModifyQuantity.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CaisseApp_MVVM/View/ModifyQuantity.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/Models/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/Models/Product.cs" afterDir="false" />
+    <list default="true" id="9ce2f011-b4d8-408c-9832-c983f8e9d1ae" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CaisseApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CaisseApp/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/View/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/View/MainWindow.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/View/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/View/MainWindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/ViewModels/ProductViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/ViewModels/ProductViewModel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,8 +87,18 @@
       <option name="presentableId" value="Default" />
       <updated>1761764925066</updated>
       <workItem from="1761764929623" duration="4098000" />
-      <workItem from="1764009549896" duration="18489000" />
+      <workItem from="1764009549896" duration="18692000" />
+      <workItem from="1764104831163" duration="1157000" />
     </task>
+    <task id="LOCAL-00001" summary="imlementation of modify quantity function">
+      <option name="closed" value="true" />
+      <created>1764029008330</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1764029008330</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,6 +108,7 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="imlementation of modify quantity function" />
+    <option name="LAST_COMMIT_MESSAGE" value="imlementation of modify quantity function" />
   </component>
 </project>
