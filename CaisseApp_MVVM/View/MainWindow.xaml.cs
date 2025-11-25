@@ -34,6 +34,12 @@ namespace CaisseApp_MVVM.View
             ScannWindow scannWindow = new ScannWindow(pvm);
             scannWindow.ShowDialog();
         }
+
+        private void ModifyQtn(object sender, RoutedEventArgs e)
+        {
+            ModifyQuantity modifyQuantity = new ModifyQuantity(pvm);
+            modifyQuantity.ShowDialog();
+        }
         
         private void PrintTicket(object sender, RoutedEventArgs e)
         {
@@ -49,15 +55,15 @@ namespace CaisseApp_MVVM.View
             {
                 using (StreamWriter sw = new StreamWriter(filePath))
                 {
-                    sw.WriteLine("========= Ticket de Caisse =========");
+                    sw.WriteLine("============== Ticket de Caisse ==============");
                     for (int i = 0; i < pvm.Products.Count; i++)
                     {
-                        string line = $"{i + 1}. {pvm.Products[i].Name.PadRight(20)} {pvm.Products[i].Price.ToString("0.00")} €";  //PadRight add space to the right of the string to align the price, for exemple if the name do 5 chars, it will add 15 space to align the price.
+                        string line = $"{i + 1}. {pvm.Products[i].Name.PadRight(20)} {pvm.Products[i].Price.ToString("0.00")} € x {pvm.Products[i].Quantity.ToString()} = {pvm.Products[i].TotalPrice.ToString()} €";  //PadRight add space to the right of the string to align the price, for exemple if the name do 5 chars, it will add 15 space to align the price.
                         sw.WriteLine(line);
                     }
-                    sw.WriteLine("-------------------------------------");
+                    sw.WriteLine("---------------------------------------------");
                     sw.WriteLine($"TOTAL : {pvm.TotalPrice.ToString("0.00")} €");
-                    sw.WriteLine("=====================================");
+                    sw.WriteLine("===============================================");
                 }
 
                 MessageBox.Show($"Ticket imprimé avec succès !\nFichier : {filePath}");

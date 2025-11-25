@@ -16,6 +16,7 @@ public class ProductViewModel : INotifyPropertyChanged
     private DB_Helper _db_helper = new DB_Helper();
 
     private ObservableCollection<Product> _products = new ObservableCollection<Product>();
+    private Product _selectedProduct;
     public ObservableCollection<Product> Products
     {
         get { return _products; }
@@ -31,12 +32,22 @@ public class ProductViewModel : INotifyPropertyChanged
         }
     } // collection that notify and declanche an event whene something is changed in the collection to update automatically the user interface.
 
+    public Product SelectedProduct
+    {
+        get => _selectedProduct; //getter return the intern value 
+        set
+        {
+            _selectedProduct = value;   //for setting new product, the intern product take the new value with the twoway biding
+            OnPropertyChanged(nameof(SelectedProduct)); //to notify the vue for the binding
+        }
+    }
+
 
     public double TotalPrice
     {
         get
         {
-            double total = Products.Sum(p => p.Price);
+            double total = Products.Sum(p => p.TotalPrice);
             Console.WriteLine($"TotalPrice mis à jour : {total}");
             return total;
         }
@@ -80,9 +91,16 @@ public class ProductViewModel : INotifyPropertyChanged
             MessageBox.Show("Panier Vide !");
             return;
         }
-        int SubTotal = Products.Sum(p => p.Price);
+        int SubTotal = Products.Sum(p => p.TotalPrice);
         Products.Add(new Product(0, "Sous-Total", SubTotal));
         OnPropertyChanged(nameof(Products));
+    }
+
+    public void Modify_Qtn(int NewQtn)
+    {
+        _selectedProduct.Quantity = NewQtn;
+        OnPropertyChanged(nameof(SelectedProduct));
+        OnPropertyChanged(nameof(TotalPrice));
     }
 
     public event PropertyChangedEventHandler? PropertyChanged;
