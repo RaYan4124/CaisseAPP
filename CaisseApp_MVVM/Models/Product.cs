@@ -49,6 +49,15 @@ namespace Models
         AddDate = DateTime.Now;
     }
 
+    public Product(int Id, string name, int price, int quantity)
+    {
+        this.Quantity = quantity;
+        this.Id = Id;
+        this.Name = name;
+        this.Price = price;
+        AddDate = DateTime.Now;
+    }
+
     public override string ToString()
     {
         return Name;

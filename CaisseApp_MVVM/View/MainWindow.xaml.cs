@@ -79,5 +79,14 @@ namespace CaisseApp_MVVM.View
             pvm.Add_SubTotal();
         }
 
+        private void NumPadClick(object sender, RoutedEventArgs e)
+        {
+            Button btn = sender as Button;
+            if (btn != null)
+            {
+                string num = btn.Content.ToString();
+                pvm.PadValue += num;
+            }
+        }
     }
 }

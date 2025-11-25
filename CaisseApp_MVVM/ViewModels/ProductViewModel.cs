@@ -17,6 +17,7 @@ public class ProductViewModel : INotifyPropertyChanged
 
     private ObservableCollection<Product> _products = new ObservableCollection<Product>();
     private Product _selectedProduct;
+    private string _pad_value;
     public ObservableCollection<Product> Products
     {
         get { return _products; }
@@ -39,6 +40,16 @@ public class ProductViewModel : INotifyPropertyChanged
         {
             _selectedProduct = value;   //for setting new product, the intern product take the new value with the twoway biding
             OnPropertyChanged(nameof(SelectedProduct)); //to notify the vue for the binding
+        }
+    }
+
+    public string PadValue
+    {
+        get => _pad_value;
+        set
+        {
+            _pad_value = value;
+            OnPropertyChanged(nameof(PadValue));
         }
     }
 
@@ -68,9 +79,19 @@ public class ProductViewModel : INotifyPropertyChanged
 
     public void AddProduct(int id, string name, int price)
     {
-        Products.Add(new Product(id, name,
-            price)); //create new product with parameters values and push it in the collection.
-        OnPropertyChanged(nameof(TotalPrice));
+        if (String.IsNullOrEmpty(_pad_value))
+        {
+            Products.Add(new Product(id, name,
+                price));
+            OnPropertyChanged(nameof(TotalPrice));
+        }
+        else
+        {
+            Products.Add(new Product(id, name,
+                price, int.Parse(_pad_value))); //create new product with parameters values and push it in the collection.
+            OnPropertyChanged(nameof(TotalPrice));
+            PadValue = String.Empty;
+        }
     }
 
     public void ShowProducts()
