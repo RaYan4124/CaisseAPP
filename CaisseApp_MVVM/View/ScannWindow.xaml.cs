@@ -38,7 +38,7 @@ public partial class ScannWindow : Window
             
 
             if (product != null)
-            {   
+            {
                 _pvm.AddProduct(product.Id, product.Name, product.Price);
                 _pvm.TotalPrice = _pvm.TotalPrice;
 

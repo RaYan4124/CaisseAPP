@@ -40,16 +40,8 @@ namespace Models
     }
     
     public int TotalPrice => Price * Quantity;
-    public Product(int Id, string name, int price)
-    {
-        this.Quantity = 1;
-        this.Id = Id;
-        this.Name = name;
-        this.Price = price;
-        AddDate = DateTime.Now;
-    }
-
-    public Product(int Id, string name, int price, int quantity)
+    
+    public Product(int Id, string name, int price, int quantity = 1) //if qtn is not specified, it will be 1
     {
         this.Quantity = quantity;
         this.Id = Id;

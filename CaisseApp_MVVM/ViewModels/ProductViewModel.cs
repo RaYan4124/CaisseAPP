@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows.Controls;
+using Mysqlx.Datatypes;
 
 namespace CaisseApp_MVVM.ViewModels;
 
@@ -79,19 +80,19 @@ public class ProductViewModel : INotifyPropertyChanged
 
     public void AddProduct(int id, string name, int price)
     {
-        if (String.IsNullOrEmpty(_pad_value))
+        var existing = Products.FirstOrDefault(p => p.Id == id);
+        int QtnToAdd = String.IsNullOrEmpty(_pad_value) ? 1 : int.Parse(_pad_value);
+        if (existing == null)
         {
             Products.Add(new Product(id, name,
-                price));
-            OnPropertyChanged(nameof(TotalPrice));
+                price, QtnToAdd));
         }
         else
         {
-            Products.Add(new Product(id, name,
-                price, int.Parse(_pad_value))); //create new product with parameters values and push it in the collection.
-            OnPropertyChanged(nameof(TotalPrice));
-            PadValue = String.Empty;
+            existing.Quantity += QtnToAdd;
         }
+        PadValue = string.Empty;
+        OnPropertyChanged(nameof(TotalPrice));
     }
 
     public void ShowProducts()

@@ -85,6 +85,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
 
             <Button
@@ -157,6 +158,17 @@
                 Width="80">
                 Sous-Total
             </Button>
+
+            <Button
+                Click="Remove_Product"
+                Content="Supprimer"
+                Grid.Column="2"
+                Grid.Row="0"
+                Height="80"
+                HorizontalAlignment="Center"
+                Margin="5"
+                VerticalAlignment="Center"
+                Width="80" />
         </Grid>
         <Grid Grid.Column="1" Margin="0,460,0,0">
             <Grid.RowDefinitions>
