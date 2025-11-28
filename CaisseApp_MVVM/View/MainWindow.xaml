@@ -1,5 +1,5 @@
 ﻿<Window
-    ResizeMode="NoResize"
+    ResizeMode="CanMinimize"
     Title="MainWindow"
     WindowState="Maximized"
     mc:Ignorable="d"
@@ -168,6 +168,15 @@
                 HorizontalAlignment="Center"
                 Margin="5"
                 VerticalAlignment="Center"
+                Width="80" />
+
+            <Button
+                Click="CorrectionPad"
+                Content="Correction"
+                Grid.Column="2"
+                Grid.Row="1"
+                Height="80"
+                Margin="5"
                 Width="80" />
         </Grid>
         <Grid Grid.Column="1" Margin="0,460,0,0">

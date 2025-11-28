@@ -97,5 +97,14 @@ namespace CaisseApp_MVVM.View
                 pvm.Products.Remove(pvm.SelectedProduct);
             }
         }
+
+        private void CorrectionPad(object sender, RoutedEventArgs e)
+        {
+            Button btn = sender as Button;
+            if (btn != null)
+            {
+                pvm.PadValue = String.Empty;
+            }
+        }
     }
 }
