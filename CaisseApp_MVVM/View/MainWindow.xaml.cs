@@ -67,6 +67,7 @@ namespace CaisseApp_MVVM.View
                 }
 
                 MessageBox.Show($"Ticket imprimé avec succès !\nFichier : {filePath}");
+                pvm.Products.Clear();
             }
             catch (Exception ex)
             {
