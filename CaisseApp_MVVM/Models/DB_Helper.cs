@@ -202,6 +202,43 @@ namespace Models
 
             return product;
         }
+        
+        public List<Product> GetProductByName(string name)
+        {
+            List<Product> products = new List<Product>();
+            string query = @"SELECT * FROM product WHERE Name LIKE CONCAT('%', @nameproduct, '%')";
+            
+            using(MySqlConnection connection = new MySqlConnection(Db_infos))
+            {
+                try
+                {
+                    connection.Open();
+                    using(MySqlCommand cmd = new MySqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@nameproduct", name);
+                        using(MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while(reader.Read())
+                            {
+                                products.Add(new Product(reader.GetInt32("BarCode"), reader.GetString("Name"),
+                                    reader.GetInt32("Price")));
+                                //product = new Product(reader.GetInt32("BarCode"), reader.GetString("Name"), reader.GetInt32("Price"));
+                            }
+                        }
+                    }
+                }
+                catch (MySqlException sqlerr)
+                {
+                    MessageBox.Show("Error", $"{sqlerr.Message}", MessageBoxButton.OK);
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show("Error", $"{err.Message}", MessageBoxButton.OK);
+                }
+            }
+
+            return products;
+        }
     }
 
 }

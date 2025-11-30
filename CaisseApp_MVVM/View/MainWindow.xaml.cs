@@ -40,6 +40,12 @@ namespace CaisseApp_MVVM.View
             ModifyQuantity modifyQuantity = new ModifyQuantity(pvm);
             modifyQuantity.ShowDialog();
         }
+
+        private void ShowSearchProduct(object sender, RoutedEventArgs e)
+        {
+            SearchWindow searchWindow = new SearchWindow(pvm);
+            searchWindow.ShowDialog();
+        }
         
         private void PrintTicket(object sender, RoutedEventArgs e)
         {

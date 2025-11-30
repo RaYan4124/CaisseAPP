@@ -17,7 +17,10 @@ public class ProductViewModel : INotifyPropertyChanged
     private DB_Helper _db_helper = new DB_Helper();
 
     private ObservableCollection<Product> _products = new ObservableCollection<Product>();
+    private ObservableCollection<Product> _research = new ObservableCollection<Product>();
+    
     private Product _selectedProduct;
+    private Product _selectedProductSearch;
     private string _pad_value;
     public ObservableCollection<Product> Products
     {
@@ -34,6 +37,16 @@ public class ProductViewModel : INotifyPropertyChanged
         }
     } // collection that notify and declanche an event whene something is changed in the collection to update automatically the user interface.
 
+    public ObservableCollection<Product> Research
+    {
+        get { return _research; }
+        set
+        {
+            _research = value;
+            OnPropertyChanged(nameof(Research));
+        }
+    }
+    
     public Product SelectedProduct
     {
         get => _selectedProduct; //getter return the intern value 
@@ -41,6 +54,22 @@ public class ProductViewModel : INotifyPropertyChanged
         {
             _selectedProduct = value;   //for setting new product, the intern product take the new value with the twoway biding
             OnPropertyChanged(nameof(SelectedProduct)); //to notify the vue for the binding
+        }
+    }
+
+    public Product SelectedProductSearch
+    {
+        get => _selectedProductSearch;
+        set
+        {
+            _selectedProductSearch = value;
+            OnPropertyChanged(nameof(SelectedProductSearch));
+
+            if (_selectedProductSearch != null)
+            {
+                AddProductFromSearch(_selectedProductSearch);
+                _selectedProductSearch = null; //make it empty at the end for detecting another potential click on the same item
+            }
         }
     }
 
@@ -60,17 +89,14 @@ public class ProductViewModel : INotifyPropertyChanged
         get
         {
             double total = Products.Sum(p => p.TotalPrice);
-            Console.WriteLine($"TotalPrice mis à jour : {total}");
             return total;
         }
 
         set { OnPropertyChanged(nameof(TotalPrice)); }
     }
+    
+        //get{return Products.Sum(p => p.Price);}  get permet de calculer et renvoyer une valeur, tandis que set permet de modifier et d'affecter un nouveau contenue a la propriété
 
-    /*{
-        get{return Products.Sum(p => p.Price);}  get permet de calculer et renvoyer une valeur, tandis que set permet de modifier et d'affecter un nouveau contenue a la propriété
-
-    }*/
     public ProductViewModel()
     {
         Products =
@@ -97,10 +123,10 @@ public class ProductViewModel : INotifyPropertyChanged
 
     public void ShowProducts()
     {
-        Products.Clear(); //clear the collection
-        foreach (var product in _db_helper.GetProducts()) //foreach product on the db 
+        Products.Clear(); 
+        foreach (var product in _db_helper.GetProducts()) 
         {
-            Products.Add(product); //add the product on the collection
+            Products.Add(product);
         }
 
         OnPropertyChanged(nameof(TotalPrice));
@@ -124,6 +150,40 @@ public class ProductViewModel : INotifyPropertyChanged
         OnPropertyChanged(nameof(SelectedProduct));
         OnPropertyChanged(nameof(TotalPrice));
     }
+
+    public void Searching(string s)
+    {
+        Research.Clear();
+        List<Product> res = _db_helper.GetProductByName(s);
+        if (res.Any())
+        {
+            foreach (var p in res)
+            {
+                Research.Add(p);
+            }
+        }
+    }
+
+    public void AddProductFromSearch(Product p)
+    {
+        var existing = Products.FirstOrDefault(x => x.Id == p.Id);
+        if (existing != null)
+        {
+            existing.Quantity++;
+        }
+        else
+        {
+            Products.Add(new Product(p.Id, p.Name, p.Price));
+        }
+        
+        OnPropertyChanged(nameof(TotalPrice));
+    }
+
+    public void ResetSearch()
+    {
+        Research.Clear();
+    }
+    
 
     public event PropertyChangedEventHandler? PropertyChanged;
 

@@ -1,0 +1,56 @@
+﻿<Window
+    Height="300"
+    Title="SearchWindow"
+    Width="750"
+    mc:Ignorable="d"
+    x:Class="CaisseApp_MVVM.View.SearchWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:CaisseApp_MVVM.View"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <TextBlock FontWeight="Bold" Margin="20">Rechercher un produit :</TextBlock>
+        <TextBox
+            Height="30"
+            Margin="0,0,0,160"
+            Width="350"
+            x:Name="ProductName" />
+
+        <DataGrid
+            AutoGenerateColumns="False"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            Height="100"
+            ItemsSource="{Binding Research}"
+            SelectedItem="{Binding SelectedProductSearch, Mode=TwoWay}"
+            SelectionChanged="Close_Window_Button"
+            x:Name="SearchingDataGrid">
+            <!--  selectionchanged happen when  the selection of the controler change (when the item selected change)  and it hapen after the binding of selecteditem  -->
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                    Binding="{Binding Name}"
+                    Header="Produit"
+                    IsReadOnly="True"
+                    Width="4*" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button
+            Click="SearchProduct"
+            Height="40"
+            Margin="0,200,400,0"
+            Width="100"
+            x:Name="ValideButton">
+            Valider
+        </Button>
+        <Button
+            Click="Close_Window_Button"
+            Height="40"
+            Margin="400,200,0,0"
+            Width="90"
+            x:Name="AnnulerButton">
+            Annuler
+        </Button>
+    </Grid>
+</Window>
