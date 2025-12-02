@@ -148,7 +148,6 @@
             </Button>
 
             <Button
-                Click="Sub_Total"
                 Grid.Column="1"
                 Grid.Row="2"
                 Height="80"

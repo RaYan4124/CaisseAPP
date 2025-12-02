@@ -81,10 +81,10 @@ namespace CaisseApp_MVVM.View
             }
         }
 
-        private void Sub_Total(object sender, RoutedEventArgs e)
+        /*private void Sub_Total(object sender, RoutedEventArgs e)
         {
             pvm.Add_SubTotal();
-        }
+        }*/
 
         private void NumPadClick(object sender, RoutedEventArgs e)
         {

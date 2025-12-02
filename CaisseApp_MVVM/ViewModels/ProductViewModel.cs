@@ -132,7 +132,7 @@ public class ProductViewModel : INotifyPropertyChanged
         OnPropertyChanged(nameof(TotalPrice));
     }
 
-    public void Add_SubTotal()
+    /*public void Add_SubTotal()
     {
         if (_products.Count == 0)
         {
@@ -142,7 +142,7 @@ public class ProductViewModel : INotifyPropertyChanged
         int SubTotal = Products.Sum(p => p.TotalPrice);
         Products.Add(new Product(0, "Sous-Total", SubTotal));
         OnPropertyChanged(nameof(Products));
-    }
+    }*/
 
     public void Modify_Qtn(int NewQtn)
     {
@@ -178,13 +178,7 @@ public class ProductViewModel : INotifyPropertyChanged
         
         OnPropertyChanged(nameof(TotalPrice));
     }
-
-    public void ResetSearch()
-    {
-        Research.Clear();
-    }
     
-
     public event PropertyChangedEventHandler? PropertyChanged;
 
     private void OnPropertyChanged(string propertyName)

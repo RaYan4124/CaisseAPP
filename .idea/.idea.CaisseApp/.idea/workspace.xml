@@ -8,13 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ce2f011-b4d8-408c-9832-c983f8e9d1ae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CaisseApp_MVVM/View/SearchWindow.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CaisseApp_MVVM/View/SearchWindow.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CaisseApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CaisseApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/Models/DB_Helper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/Models/DB_Helper.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/View/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/View/MainWindow.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/View/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/View/MainWindow.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/ViewModels/ProductViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/ViewModels/ProductViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaisseApp_Tests_v0/ProductViewModel_test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_Tests_v0/ProductViewModel_test.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +96,8 @@
       <workItem from="1764169380215" duration="231000" />
       <workItem from="1764271407669" duration="6951000" />
       <workItem from="1764358057677" duration="8508000" />
-      <workItem from="1764531857741" duration="12992000" />
+      <workItem from="1764531857741" duration="14295000" />
+      <workItem from="1764702683577" duration="2742000" />
     </task>
     <task id="LOCAL-00001" summary="imlementation of modify quantity function">
       <option name="closed" value="true" />
@@ -148,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764360378481</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="implementation of research products by name and selection">
+      <option name="closed" value="true" />
+      <created>1764546044902</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1764546044903</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +171,7 @@
     <MESSAGE value="adding remove product function and implementation of adding product that already exist in the list" />
     <MESSAGE value="implementation of correction num pad function and button" />
     <MESSAGE value="clear liste after paiment" />
-    <option name="LAST_COMMIT_MESSAGE" value="clear liste after paiment" />
+    <MESSAGE value="implementation of research products by name and selection" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementation of research products by name and selection" />
   </component>
 </project>
