@@ -68,7 +68,7 @@ public class ProductViewModel : INotifyPropertyChanged
 
             if (_selectedProductSearch != null)
             {
-                AddProductFromSearch(_selectedProductSearch);
+                AddProduct(_selectedProductSearch.Id, _selectedProductSearch.Name, _selectedProductSearch.Price);
                 _selectedProductSearch = null; //make it empty at the end for detecting another potential click on the same item
             }
         }
@@ -165,20 +165,22 @@ public class ProductViewModel : INotifyPropertyChanged
         }
     }
 
-    public void AddProductFromSearch(Product p)
+    /*public void AddProductFromSearch(Product p)
     {
         var existing = Products.FirstOrDefault(x => x.Id == p.Id);
+        int QtnToAdd = String.IsNullOrEmpty(_pad_value) ? 1 : int.Parse(_pad_value);
+
         if (existing != null)
         {
-            existing.Quantity++;
+            existing.Quantity += QtnToAdd;
         }
         else
         {
-            Products.Add(new Product(p.Id, p.Name, p.Price));
+            Products.Add(new Product(p.Id, p.Name, p.Price, QtnToAdd));
         }
-        
+        PadValue = string.Empty;
         OnPropertyChanged(nameof(TotalPrice));
-    }
+    }*/
     
     public void Remove_Product()
     {
@@ -187,6 +189,11 @@ public class ProductViewModel : INotifyPropertyChanged
             Products.Remove(SelectedProduct);
         }
         OnPropertyChanged(nameof(TotalPrice));
+    }
+    
+    public void NumPad(string s)
+    {
+        PadValue += s;
     }
     
     public event PropertyChangedEventHandler? PropertyChanged;

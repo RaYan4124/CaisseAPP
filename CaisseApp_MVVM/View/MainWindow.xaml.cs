@@ -89,11 +89,7 @@ namespace CaisseApp_MVVM.View
         private void NumPadClick(object sender, RoutedEventArgs e)
         {
             Button btn = sender as Button;
-            if (btn != null)
-            {
-                string num = btn.Content.ToString();
-                pvm.PadValue += num;
-            }
+            pvm.NumPad(btn.Content.ToString());
         }
 
         private void RemoveProduct(object sender, RoutedEventArgs e)

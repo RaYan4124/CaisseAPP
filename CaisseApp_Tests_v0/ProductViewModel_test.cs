@@ -8,17 +8,6 @@ public class ProductViewModel_test
     public ProductViewModel Pvm_Test = new ProductViewModel();
     public Product p_test = new Product(0000, "p_test", 1);
     public Random rand = new Random();
-
-    [Fact]
-    public void AddProduct_test()
-    {
-        Pvm_Test.AddProduct(1000, "prod_pvm_test", 100);
-        Assert.NotEmpty(Pvm_Test.Products);
-        Assert.Single(Pvm_Test.Products);
-        Assert.Equal("prod_pvm_test", Pvm_Test.Products[0].Name);
-        Assert.Equal(100, Pvm_Test.Products[0].Price);
-        Assert.Equal(1000, Pvm_Test.Products[0].Id);
-    }
     
     [Fact]
     public void Modify_Qtn_test()
@@ -30,13 +19,14 @@ public class ProductViewModel_test
     }
 
     [Fact]
-    public void AddProductFromSearch_emptyListCase_test()
+    public void AddProduct_emptyListCase_test()
     {
         Pvm_Test.Products.Clear();
         Assert.Empty(Pvm_Test.Products);
-        Pvm_Test.AddProductFromSearch(p_test);
+        Pvm_Test.AddProduct(p_test.Id, p_test.Name, p_test.Price);
         
         Assert.NotEmpty(Pvm_Test.Products);
+        Assert.Single(Pvm_Test.Products);
         Assert.Equal(1, Pvm_Test.Products.First().Quantity);
         Assert.Equal(p_test.Name, Pvm_Test.Products.First().Name);
         Assert.Equal(p_test.Id, Pvm_Test.Products.First().Id);
@@ -54,7 +44,7 @@ public class ProductViewModel_test
         Pvm_Test.Products.Add(p_test);
         Assert.NotEmpty(Pvm_Test.Products);
         
-        Pvm_Test.AddProductFromSearch(p_test);
+        Pvm_Test.AddProduct(p_test.Id, p_test.Name, p_test.Price);
         Assert.Equal(2, Pvm_Test.Products.First().Quantity);
         Assert.Equal(p_test.Name, Pvm_Test.Products.First().Name);
         Assert.Equal(p_test.Id, Pvm_Test.Products.First().Id);
