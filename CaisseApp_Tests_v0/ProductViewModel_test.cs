@@ -43,4 +43,22 @@ public class ProductViewModel_test
         Assert.Equal(p_test.Price, Pvm_Test.Products.First().Price);
         Assert.Equal(p_test.Price, Pvm_Test.TotalPrice);
     }
+
+    [Fact]
+    public void AddProductSearch_notEmptyListCase_test()
+    {
+        Pvm_Test.Products.Clear();
+        Assert.Empty(Pvm_Test.Products);
+
+        p_test.Quantity = 1;
+        Pvm_Test.Products.Add(p_test);
+        Assert.NotEmpty(Pvm_Test.Products);
+        
+        Pvm_Test.AddProductFromSearch(p_test);
+        Assert.Equal(2, Pvm_Test.Products.First().Quantity);
+        Assert.Equal(p_test.Name, Pvm_Test.Products.First().Name);
+        Assert.Equal(p_test.Id, Pvm_Test.Products.First().Id);
+        Assert.Equal(p_test.Price, Pvm_Test.Products.First().Price);
+        Assert.Equal(p_test.Price * 2, Pvm_Test.TotalPrice);
+    }
 }
