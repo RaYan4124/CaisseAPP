@@ -28,4 +28,19 @@ public class ProductViewModel_test
         Pvm_Test.Modify_Qtn(x);
         Assert.Equal(x, Pvm_Test.SelectedProduct.Quantity);
     }
+
+    [Fact]
+    public void AddProductFromSearch_emptyListCase_test()
+    {
+        Pvm_Test.Products.Clear();
+        Assert.Empty(Pvm_Test.Products);
+        Pvm_Test.AddProductFromSearch(p_test);
+        
+        Assert.NotEmpty(Pvm_Test.Products);
+        Assert.Equal(1, Pvm_Test.Products.First().Quantity);
+        Assert.Equal(p_test.Name, Pvm_Test.Products.First().Name);
+        Assert.Equal(p_test.Id, Pvm_Test.Products.First().Id);
+        Assert.Equal(p_test.Price, Pvm_Test.Products.First().Price);
+        Assert.Equal(p_test.Price, Pvm_Test.TotalPrice);
+    }
 }
