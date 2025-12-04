@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows.Controls;
 using Mysqlx.Datatypes;
+using Object = Mysqlx.Datatypes.Object;
 
 namespace CaisseApp_MVVM.ViewModels;
 
@@ -176,6 +177,15 @@ public class ProductViewModel : INotifyPropertyChanged
             Products.Add(new Product(p.Id, p.Name, p.Price));
         }
         
+        OnPropertyChanged(nameof(TotalPrice));
+    }
+    
+    public void Remove_Product()
+    {
+        if (SelectedProduct != null)
+        {
+            Products.Remove(SelectedProduct);
+        }
         OnPropertyChanged(nameof(TotalPrice));
     }
     

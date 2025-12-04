@@ -7,8 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ce2f011-b4d8-408c-9832-c983f8e9d1ae" name="Changes" comment="">
+    <list default="true" id="9ce2f011-b4d8-408c-9832-c983f8e9d1ae" name="Changes" comment="testing AddProductSearch for not empty list">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CaisseApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CaisseApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/View/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/View/MainWindow.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/View/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/View/MainWindow.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/ViewModels/ProductViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/ViewModels/ProductViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaisseApp_Tests_v0/ProductViewModel_test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_Tests_v0/ProductViewModel_test.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +99,7 @@
       <workItem from="1764531857741" duration="14295000" />
       <workItem from="1764702683577" duration="3078000" />
       <workItem from="1764777502635" duration="3463000" />
-      <workItem from="1764838191312" duration="2102000" />
+      <workItem from="1764838191312" duration="7191000" />
     </task>
     <task id="LOCAL-00001" summary="imlementation of modify quantity function">
       <option name="closed" value="true" />
@@ -162,7 +165,23 @@
       <option name="project" value="LOCAL" />
       <updated>1764706349628</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="testing AddPProductSearch for empty list case">
+      <option name="closed" value="true" />
+      <created>1764840359153</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1764840359154</updated>
+    </task>
+    <task id="LOCAL-00010" summary="testing AddProductSearch for not empty list">
+      <option name="closed" value="true" />
+      <created>1764866211836</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1764866211836</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +199,8 @@
     <MESSAGE value="clear liste after paiment" />
     <MESSAGE value="implementation of research products by name and selection" />
     <MESSAGE value="testing Modify_qtn function" />
-    <option name="LAST_COMMIT_MESSAGE" value="testing Modify_qtn function" />
+    <MESSAGE value="testing AddPProductSearch for empty list case" />
+    <MESSAGE value="testing AddProductSearch for not empty list" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing AddProductSearch for not empty list" />
   </component>
 </project>
