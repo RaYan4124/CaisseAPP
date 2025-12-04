@@ -7,10 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ce2f011-b4d8-408c-9832-c983f8e9d1ae" name="Changes" comment="removing AddProductFromSearch function">
+    <list default="true" id="9ce2f011-b4d8-408c-9832-c983f8e9d1ae" name="Changes" comment="testing Remove_product function">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CaisseApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CaisseApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/View/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/View/MainWindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/ViewModels/ProductViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/ViewModels/ProductViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaisseApp_Tests_v0/ProductViewModel_test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_Tests_v0/ProductViewModel_test.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +96,7 @@
       <workItem from="1764531857741" duration="14295000" />
       <workItem from="1764702683577" duration="3078000" />
       <workItem from="1764777502635" duration="3463000" />
-      <workItem from="1764838191312" duration="11992000" />
+      <workItem from="1764838191312" duration="17495000" />
     </task>
     <task id="LOCAL-00001" summary="imlementation of modify quantity function">
       <option name="closed" value="true" />
@@ -196,7 +194,23 @@
       <option name="project" value="LOCAL" />
       <updated>1764872077157</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="move CorrectionPad function on ProductViewModel.cs">
+      <option name="closed" value="true" />
+      <created>1764873128949</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1764873128952</updated>
+    </task>
+    <task id="LOCAL-00014" summary="testing Remove_product function">
+      <option name="closed" value="true" />
+      <created>1764876043147</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1764876043147</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,6 +232,8 @@
     <MESSAGE value="testing AddProductSearch for not empty list" />
     <MESSAGE value="moving RemoveProduct function on ProductViewModel.cs" />
     <MESSAGE value="removing AddProductFromSearch function" />
-    <option name="LAST_COMMIT_MESSAGE" value="removing AddProductFromSearch function" />
+    <MESSAGE value="move CorrectionPad function on ProductViewModel.cs" />
+    <MESSAGE value="testing Remove_product function" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing Remove_product function" />
   </component>
 </project>

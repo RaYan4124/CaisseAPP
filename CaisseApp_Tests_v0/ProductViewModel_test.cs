@@ -6,6 +6,7 @@ namespace CaisseApp_Tests_v0;
 public class ProductViewModel_test
 {
     public ProductViewModel Pvm_Test = new ProductViewModel();
+    public DB_Helper db_test = new DB_Helper();
     public Product p_test = new Product(0000, "p_test", 1);
     public Random rand = new Random();
     
@@ -83,5 +84,25 @@ public class ProductViewModel_test
         Pvm_Test.Remove_Product();
         Assert.Empty(Pvm_Test.Products);
         Assert.Equal(0, Pvm_Test.TotalPrice);
+    }
+
+    [Fact]
+    public void Searching_test()
+    {
+        Pvm_Test.Research.Clear();
+        Assert.Empty(Pvm_Test.Research);
+        try
+        {
+            db_test.AddProduct(999999999, "99999", 99999);
+            Pvm_Test.Searching("99999");
+        
+            Assert.NotEmpty(Pvm_Test.Research);
+            Assert.Single(Pvm_Test.Research);
+            Assert.Equal(999999999, Pvm_Test.Research.First().Id);
+        }
+        finally
+        {
+            db_test.DeleteProduct(999999999);
+        } 
     }
 }
