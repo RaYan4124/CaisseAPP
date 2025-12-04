@@ -99,11 +99,7 @@ namespace CaisseApp_MVVM.View
 
         private void CorrectionPad(object sender, RoutedEventArgs e)
         {
-            Button btn = sender as Button;
-            if (btn != null)
-            {
-                pvm.PadValue = String.Empty;
-            }
+            pvm.CorrectionPad();
         }
     }
 }

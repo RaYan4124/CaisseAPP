@@ -164,23 +164,6 @@ public class ProductViewModel : INotifyPropertyChanged
             }
         }
     }
-
-    /*public void AddProductFromSearch(Product p)
-    {
-        var existing = Products.FirstOrDefault(x => x.Id == p.Id);
-        int QtnToAdd = String.IsNullOrEmpty(_pad_value) ? 1 : int.Parse(_pad_value);
-
-        if (existing != null)
-        {
-            existing.Quantity += QtnToAdd;
-        }
-        else
-        {
-            Products.Add(new Product(p.Id, p.Name, p.Price, QtnToAdd));
-        }
-        PadValue = string.Empty;
-        OnPropertyChanged(nameof(TotalPrice));
-    }*/
     
     public void Remove_Product()
     {
@@ -194,6 +177,11 @@ public class ProductViewModel : INotifyPropertyChanged
     public void NumPad(string s)
     {
         PadValue += s;
+    }
+    
+    public void CorrectionPad()
+    {
+        PadValue = string.Empty;
     }
     
     public event PropertyChangedEventHandler? PropertyChanged;

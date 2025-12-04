@@ -51,6 +51,4 @@ public class ProductViewModel_test
         Assert.Equal(p_test.Price, Pvm_Test.Products.First().Price);
         Assert.Equal(p_test.Price * 2, Pvm_Test.TotalPrice);
     }
-    
-    
 }
