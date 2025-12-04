@@ -133,18 +133,6 @@ public class ProductViewModel : INotifyPropertyChanged
         OnPropertyChanged(nameof(TotalPrice));
     }
 
-    /*public void Add_SubTotal()
-    {
-        if (_products.Count == 0)
-        {
-            MessageBox.Show("Panier Vide !");
-            return;
-        }
-        int SubTotal = Products.Sum(p => p.TotalPrice);
-        Products.Add(new Product(0, "Sous-Total", SubTotal));
-        OnPropertyChanged(nameof(Products));
-    }*/
-
     public void Modify_Qtn(int NewQtn)
     {
         _selectedProduct.Quantity = NewQtn;

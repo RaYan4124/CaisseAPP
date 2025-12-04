@@ -35,7 +35,7 @@ public class ProductViewModel_test
     }
 
     [Fact]
-    public void AddProductSearch_notEmptyListCase_test()
+    public void AddProduct_notEmptyListCase_test()
     {
         Pvm_Test.Products.Clear();
         Assert.Empty(Pvm_Test.Products);
@@ -50,5 +50,38 @@ public class ProductViewModel_test
         Assert.Equal(p_test.Id, Pvm_Test.Products.First().Id);
         Assert.Equal(p_test.Price, Pvm_Test.Products.First().Price);
         Assert.Equal(p_test.Price * 2, Pvm_Test.TotalPrice);
+    }
+
+    [Fact]
+    public void Remove_Product_test()
+    {
+        Pvm_Test.Products.Clear();
+        Assert.Empty(Pvm_Test.Products);
+        
+        int x = rand.Next(5);
+        for (int i = 1; i <= 5; i++)
+        {
+            Pvm_Test.Products.Add(new Product(i, $"{i}-test", 10));
+        }
+        
+        Assert.NotEmpty(Pvm_Test.Products);
+        Assert.Equal(50, Pvm_Test.TotalPrice);
+
+        for (int i = 1; i <= 5; i++)
+        {
+            var first = Pvm_Test.Products.First();
+            Pvm_Test.SelectedProduct = first;
+            Pvm_Test.Remove_Product();
+            Assert.DoesNotContain(first, Pvm_Test.Products);
+            Assert.Equal(5 - i ,Pvm_Test.Products.Count);
+            Assert.Equal(Pvm_Test.Products.Count * 10, Pvm_Test.TotalPrice);
+        }
+        Assert.Empty(Pvm_Test.Products);
+        Assert.Equal(0, Pvm_Test.TotalPrice);
+        
+        //trying removing for empty list
+        Pvm_Test.Remove_Product();
+        Assert.Empty(Pvm_Test.Products);
+        Assert.Equal(0, Pvm_Test.TotalPrice);
     }
 }
