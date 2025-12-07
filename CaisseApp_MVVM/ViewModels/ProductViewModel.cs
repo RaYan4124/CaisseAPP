@@ -179,3 +179,16 @@ public class ProductViewModel : INotifyPropertyChanged
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
