@@ -8,8 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ce2f011-b4d8-408c-9832-c983f8e9d1ae" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CaisseApp/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CaisseApp/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CaisseApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CaisseApp/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/View/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/View/MainWindow.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/View/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/View/MainWindow.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/ViewModels/ProductViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/ViewModels/ProductViewModel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +42,6 @@
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="34kkOChOIOQVdpCcCv3ZL8fLZ2Q" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -50,13 +51,15 @@
     ".NET Project.CaisseApp.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "ReSharper",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -66,9 +69,12 @@
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CaisseApp_MVVM/bin/Debug/net8.0-windows" />
       <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="MIXED_MODE_DEBUG" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="AUTO_ATTACH_CHILDREN" value="0" />
       <option name="PROJECT_PATH" value="$PROJECT_DIR$/CaisseApp_MVVM/CaisseApp_MVVM.csproj" />
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
@@ -99,7 +105,17 @@
       <workItem from="1764777502635" duration="3463000" />
       <workItem from="1764838191312" duration="21756000" />
       <workItem from="1765140164465" duration="5998000" />
-      <workItem from="1765146304511" duration="1361000" />
+      <workItem from="1765146304511" duration="1603000" />
+      <workItem from="1765308922995" duration="885000" />
+      <workItem from="1765309922094" duration="909000" />
+      <workItem from="1765310906479" duration="1160000" />
+      <workItem from="1765312137322" duration="412000" />
+      <workItem from="1765312658756" duration="736000" />
+      <workItem from="1765314247610" duration="90000" />
+      <workItem from="1765314393345" duration="66000" />
+      <workItem from="1765314499576" duration="171000" />
+      <workItem from="1765314808191" duration="613000" />
+      <workItem from="1765317437654" duration="4788000" />
     </task>
     <task id="LOCAL-00001" summary="imlementation of modify quantity function">
       <option name="closed" value="true" />
@@ -221,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764878642173</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="replace DataGrid by ListBox for the MainWindow.xaml">
+      <option name="closed" value="true" />
+      <created>1765147905008</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1765147905008</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +270,29 @@
     <MESSAGE value="move CorrectionPad function on ProductViewModel.cs" />
     <MESSAGE value="testing Remove_product function" />
     <MESSAGE value="testing Searching product function" />
-    <option name="LAST_COMMIT_MESSAGE" value="testing Searching product function" />
+    <MESSAGE value="replace DataGrid by ListBox for the MainWindow.xaml" />
+    <option name="LAST_COMMIT_MESSAGE" value="replace DataGrid by ListBox for the MainWindow.xaml" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.Tasks.TaskCanceledException" breakIfHandledByOtherCode="false" displayValue="System.Threading.Tasks.TaskCanceledException" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

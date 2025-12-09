@@ -17,7 +17,7 @@ namespace CaisseApp_MVVM.View
             pvm = new ProductViewModel();
             this.DataContext = pvm;
         }
-        
+       
         private void Add_DB_Button_Click(object sender, RoutedEventArgs e)
         {
             AddProductWindow addProductWindow = new AddProductWindow();

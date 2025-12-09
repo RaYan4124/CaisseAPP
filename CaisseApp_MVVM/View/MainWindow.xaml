@@ -85,9 +85,9 @@
 
             <ListBox.ItemContainerStyle>
                 <Style TargetType="ListBoxItem">
-                    <Setter Property="Padding" Value="2" />
+                    <Setter Property="Padding" Value="1" />
                     <Setter Property="HorizontalContentAlignment" Value="Stretch" />
-                    <Setter Property="FontSize" Value="17px" />
+                    <Setter Property="FontSize" Value="14px" />
                     <Setter Property="FontWeight" Value="Bold" />
                 </Style>
             </ListBox.ItemContainerStyle>
@@ -102,10 +102,10 @@
                         </Grid.ColumnDefinitions>
 
                         <TextBlock Grid.Column="0" Text="{Binding Name}" />
-                        <TextBlock Grid.Column="1" Text="{Binding Quantity}" />
+                        <TextBlock Grid.Column="1" Text="{Binding Quantity, StringFormat=x {0}}" />
                         <TextBlock
                             Grid.Column="2"
-                            Padding="0,0,10,0"
+                            Padding="20,0,0,0"
                             Text="{Binding TotalPrice}" />
                     </Grid>
                 </DataTemplate>
@@ -113,7 +113,7 @@
         </ListBox>
         <Grid
             Grid.Column="1"
-            Margin="100"
+            Margin="-175,170,0,0"
             Panel.ZIndex="10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
@@ -128,8 +128,12 @@
             </Grid.ColumnDefinitions>
 
             <Button
+                Background="Transparent"
+                BorderThickness="1.5"
                 Click="Show_DB_Button_Click"
                 Content="Afficher BDD"
+                FontSize="12"
+                FontWeight="Bold"
                 Grid.Column="1"
                 Grid.Row="0"
                 Height="80"
@@ -139,7 +143,11 @@
                 Width="80" />
 
             <Button
+                Background="Transparent"
+                BorderThickness="1.5"
                 Click="Add_DB_Button_Click"
+                FontSize="12"
+                FontWeight="Bold"
                 Grid.Column="0"
                 Grid.Row="0"
                 Height="80"
@@ -152,8 +160,11 @@
             </Button>
 
             <Button
+                Background="Transparent"
+                BorderThickness="1.5"
                 Click="ModifyQtn"
                 Content="Mod quantité"
+                FontWeight="Bold"
                 Grid.Column="0"
                 Grid.Row="1"
                 Height="80"
@@ -161,7 +172,11 @@
                 Width="80" />
 
             <Button
+                Background="Transparent"
+                BorderThickness="1.5"
                 Click="ShowScanWindox"
+                FontSize="12"
+                FontWeight="Bold"
                 Grid.Column="1"
                 Grid.Row="1"
                 Height="80"
@@ -174,7 +189,11 @@
             </Button>
 
             <Button
+                Background="Transparent"
+                BorderThickness="1.5"
                 Click="PrintTicket"
+                FontSize="12"
+                FontWeight="Bold"
                 Grid.Column="0"
                 Grid.Row="2"
                 Height="80"
@@ -187,6 +206,10 @@
             </Button>
 
             <Button
+                Background="Transparent"
+                BorderThickness="1.5"
+                FontSize="12"
+                FontWeight="Bold"
                 Grid.Column="1"
                 Grid.Row="2"
                 Height="80"
@@ -198,8 +221,12 @@
             </Button>
 
             <Button
+                Background="Transparent"
+                BorderThickness="1.5"
                 Click="RemoveProduct"
                 Content="Supprimer"
+                FontSize="12"
+                FontWeight="Bold"
                 Grid.Column="2"
                 Grid.Row="0"
                 Height="80"
@@ -209,8 +236,12 @@
                 Width="80" />
 
             <Button
+                Background="Transparent"
+                BorderThickness="1.5"
                 Click="CorrectionPad"
                 Content="Correction"
+                FontSize="12"
+                FontWeight="Bold"
                 Grid.Column="2"
                 Grid.Row="1"
                 Height="80"
@@ -218,15 +249,19 @@
                 Width="80" />
 
             <Button
+                Background="Transparent"
+                BorderThickness="1.5"
                 Click="ShowSearchProduct"
                 Content="Recherche"
+                FontSize="12"
+                FontWeight="Bold"
                 Grid.Column="2"
                 Grid.Row="2"
                 Height="80"
                 Margin="5"
                 Width="80" />
         </Grid>
-        <Grid Grid.Column="1" Margin="0,460,0,0">
+        <Grid Grid.Column="1" Margin="-175,460,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -240,125 +275,149 @@
             </Grid.ColumnDefinitions>
 
             <Button
+                Background="Transparent"
+                BorderThickness="1.5"
                 Click="NumPadClick"
                 Content="1"
                 FontSize="30"
                 FontWeight="Bold"
                 Grid.Column="0"
                 Grid.Row="0"
-                Height="70"
+                Height="80"
                 Margin="5"
-                Width="70" />
+                Width="80" />
             <Button
+                Background="Transparent"
+                BorderThickness="1.5"
                 Click="NumPadClick"
                 Content="2"
                 FontSize="30"
                 FontWeight="Bold"
                 Grid.Column="1"
                 Grid.Row="0"
-                Height="70"
+                Height="80"
                 Margin="5"
-                Width="70" />
+                Width="80" />
             <Button
+                Background="Transparent"
+                BorderThickness="1.5"
                 Click="NumPadClick"
                 Content="3"
                 FontSize="30"
                 FontWeight="Bold"
                 Grid.Column="2"
                 Grid.Row="0"
-                Height="70"
+                Height="80"
                 Margin="5"
-                Width="70" />
+                Width="80" />
             <Button
+                Background="Transparent"
+                BorderThickness="1.5"
                 Click="NumPadClick"
                 Content="4"
                 FontSize="30"
                 FontWeight="Bold"
                 Grid.Column="0"
                 Grid.Row="1"
-                Height="70"
+                Height="80"
                 Margin="5"
-                Width="70" />
+                Width="80" />
             <Button
+                Background="Transparent"
+                BorderThickness="1.5"
                 Click="NumPadClick"
                 Content="5"
                 FontSize="30"
                 FontWeight="Bold"
                 Grid.Column="1"
                 Grid.Row="1"
-                Height="70"
+                Height="80"
                 Margin="5"
-                Width="70" />
+                Width="80" />
             <Button
+                Background="Transparent"
+                BorderThickness="1.5"
                 Click="NumPadClick"
                 Content="6"
                 FontSize="30"
                 FontWeight="Bold"
                 Grid.Column="2"
                 Grid.Row="1"
-                Height="70"
+                Height="80"
                 Margin="5"
-                Width="70" />
+                Width="80" />
             <Button
+                Background="Transparent"
+                BorderThickness="1.5"
                 Click="NumPadClick"
                 Content="7"
                 FontSize="30"
                 FontWeight="Bold"
                 Grid.Column="0"
                 Grid.Row="2"
-                Height="70"
+                Height="80"
                 Margin="5"
-                Width="70" />
+                Width="80" />
             <Button
+                Background="Transparent"
+                BorderThickness="1.5"
                 Click="NumPadClick"
                 Content="8"
                 FontSize="30"
                 FontWeight="Bold"
                 Grid.Column="1"
                 Grid.Row="2"
-                Height="70"
+                Height="80"
                 Margin="5"
-                Width="70" />
+                Width="80" />
             <Button
+                Background="Transparent"
+                BorderThickness="1.5"
                 Click="NumPadClick"
                 Content="9"
                 FontSize="30"
                 FontWeight="Bold"
                 Grid.Column="2"
                 Grid.Row="2"
-                Height="70"
+                Height="80"
                 Margin="5"
-                Width="70" />
+                Width="80" />
             <Button
+                Background="Transparent"
+                BorderThickness="1.5"
                 Click="NumPadClick"
                 Content="."
                 FontSize="30"
                 FontWeight="Bold"
                 Grid.Column="0"
                 Grid.Row="3"
-                Height="70"
+                Height="80"
                 Margin="5"
-                Width="70" />
+                Width="80" />
             <Button
+                Background="Transparent"
+                BorderThickness="1.5"
                 Click="NumPadClick"
                 Content="0"
                 FontSize="30"
                 FontWeight="Bold"
                 Grid.Column="1"
                 Grid.Row="3"
-                Height="70"
+                Height="80"
                 Margin="5"
-                Width="70" />
+                Width="80" />
             <Button
+                Background="Transparent"
+                BorderThickness="1.5"
                 Click="NumPadClick"
                 Content="00"
                 FontSize="30"
                 FontWeight="Bold"
                 Grid.Column="2"
                 Grid.Row="3"
-                Height="70"
+                Height="80"
                 Margin="5"
-                Width="70" />
+                Width="80" />
         </Grid>
 
         <TextBlock

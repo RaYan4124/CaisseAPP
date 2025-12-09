@@ -6,6 +6,8 @@ using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Windows.Controls;
 using Mysqlx.Datatypes;
 using Object = Mysqlx.Datatypes.Object;
@@ -21,7 +23,6 @@ public class ProductViewModel : INotifyPropertyChanged
     private ObservableCollection<Product> _research = new ObservableCollection<Product>();
     
     private Product _selectedProduct;
-    private Product _selectedProductSearch;
     private string _pad_value;
     public ObservableCollection<Product> Products
     {
@@ -37,7 +38,7 @@ public class ProductViewModel : INotifyPropertyChanged
 
         }
     } // collection that notify and declanche an event whene something is changed in the collection to update automatically the user interface.
-
+    
     public ObservableCollection<Product> Research
     {
         get { return _research; }
@@ -57,23 +58,7 @@ public class ProductViewModel : INotifyPropertyChanged
             OnPropertyChanged(nameof(SelectedProduct)); //to notify the vue for the binding
         }
     }
-
-    public Product SelectedProductSearch
-    {
-        get => _selectedProductSearch;
-        set
-        {
-            _selectedProductSearch = value;
-            OnPropertyChanged(nameof(SelectedProductSearch));
-
-            if (_selectedProductSearch != null)
-            {
-                AddProduct(_selectedProductSearch.Id, _selectedProductSearch.Name, _selectedProductSearch.Price);
-                _selectedProductSearch = null; //make it empty at the end for detecting another potential click on the same item
-            }
-        }
-    }
-
+    
     public string PadValue
     {
         get => _pad_value;
@@ -97,7 +82,8 @@ public class ProductViewModel : INotifyPropertyChanged
     }
     
         //get{return Products.Sum(p => p.Price);}  get permet de calculer et renvoyer une valeur, tandis que set permet de modifier et d'affecter un nouveau contenue a la propriété
-
+    
+    
     public ProductViewModel()
     {
         Products =
