@@ -1,4 +1,5 @@
 ﻿<Window
+    Background="#F4F4F4"
     ResizeMode="CanMinimize"
     Title="MainWindow"
     WindowState="Maximized"
@@ -28,7 +29,7 @@
         </Grid.ColumnDefinitions>
 
         <Border
-            Background="#bdbdb2"
+            Background="#CFCFCF"
             Grid.Column="0"
             Height="25"
             Margin="230,0,0,785"
@@ -160,11 +161,12 @@
             </Button>
 
             <Button
-                Background="Transparent"
+                Background="#007ACC"
                 BorderThickness="1.5"
                 Click="ModifyQtn"
                 Content="Mod quantité"
                 FontWeight="Bold"
+                Foreground="White"
                 Grid.Column="0"
                 Grid.Row="1"
                 Height="80"
@@ -172,11 +174,12 @@
                 Width="80" />
 
             <Button
-                Background="Transparent"
+                Background="#007ACC"
                 BorderThickness="1.5"
                 Click="ShowScanWindox"
                 FontSize="12"
                 FontWeight="Bold"
+                Foreground="White"
                 Grid.Column="1"
                 Grid.Row="1"
                 Height="80"
@@ -189,11 +192,12 @@
             </Button>
 
             <Button
-                Background="Transparent"
+                Background="#27AE60"
                 BorderThickness="1.5"
                 Click="PrintTicket"
                 FontSize="12"
                 FontWeight="Bold"
+                Foreground="White"
                 Grid.Column="0"
                 Grid.Row="2"
                 Height="80"
@@ -221,12 +225,13 @@
             </Button>
 
             <Button
-                Background="Transparent"
+                Background="#D9534F"
                 BorderThickness="1.5"
                 Click="RemoveProduct"
                 Content="Supprimer"
                 FontSize="12"
                 FontWeight="Bold"
+                Foreground="White"
                 Grid.Column="2"
                 Grid.Row="0"
                 Height="80"
@@ -249,12 +254,13 @@
                 Width="80" />
 
             <Button
-                Background="Transparent"
+                Background="#007ACC"
                 BorderThickness="1.5"
                 Click="ShowSearchProduct"
                 Content="Recherche"
                 FontSize="12"
                 FontWeight="Bold"
+                Foreground="White"
                 Grid.Column="2"
                 Grid.Row="2"
                 Height="80"
@@ -428,7 +434,7 @@
             Total :
         </TextBlock>
         <Border
-            Background="#bdbdb2"
+            Background="#DDDDDD"
             Grid.Column="0"
             Height="25"
             Margin="140,295,0,0"
