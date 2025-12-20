@@ -14,7 +14,7 @@ public partial class ModifyQuantity : Window
     }
     
 
-    private void _ModifyQtn(Object sender, RoutedEventArgs e)
+    private void _ModifyQtn(object sender, RoutedEventArgs routedEventArgs)
     {
         try
         {
@@ -40,7 +40,18 @@ public partial class ModifyQuantity : Window
         }
     }
 
-    private void Close_Window_Button(object sender, RoutedEventArgs e)
+    private void Increment_Quantity(object sender, RoutedEventArgs routedEventArgs)
+    {
+        _pvm.IncrementQuantity();
+        
+    }
+
+    private void Decrement_Quantity(object sender, RoutedEventArgs routedEventArgs)
+    {
+        _pvm.DecrementQuantity();
+    }
+
+    private void Close_Window_Button(object sender, RoutedEventArgs routedEventArgs)
     {
         this.Close();
     }

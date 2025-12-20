@@ -157,6 +157,19 @@ public class ProductViewModel : INotifyPropertyChanged
     {
         PadValue = string.Empty;
     }
+
+    public void IncrementQuantity()
+    {
+        SelectedProduct.Quantity++;
+    }
+
+    public void DecrementQuantity()
+    {
+        if (SelectedProduct.Quantity > 1)
+        {
+            SelectedProduct.Quantity--;
+        }
+    }
     
     public event PropertyChangedEventHandler? PropertyChanged;
 

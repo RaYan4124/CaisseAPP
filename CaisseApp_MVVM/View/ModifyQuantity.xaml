@@ -1,7 +1,8 @@
 ﻿<Window
-    Height="200"
+    Height="230"
+    ResizeMode="NoResize"
     Title="ModifyQuantity"
-    Width="750"
+    Width="400"
     mc:Ignorable="d"
     x:Class="CaisseApp_MVVM.View.ModifyQuantity"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -10,26 +11,52 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Grid>
-        <TextBlock FontWeight="Bold" Margin="20">Saisissez la nouvelle quantité :</TextBlock>
+        <TextBlock FontWeight="Bold" Margin="115,15,0,0">Saisissez la nouvelle quantité :</TextBlock>
         <TextBox
-            Height="40"
+            FontSize="17px"
+            FontWeight="Bold"
+            Height="60"
             Margin="0,0,0,35"
+            Text="{Binding SelectedProduct.Quantity}"
+            TextAlignment="Center"
+            VerticalContentAlignment="Center"
             Width="70"
             x:Name="Newqtn" />
 
         <Button
-            Click="_ModifyQtn"
-            Content="Valider"
-            Height="40"
-            Margin="0,100,400,0"
-            Width="100"
+            Click="Decrement_Quantity"
+            Content="-"
+            FontSize="25px"
+            FontWeight="ExtraBold"
+            Foreground="Red"
+            Height="60"
+            Margin="0,0,142,35"
+            Width="70"
             x:Name="ValideButton" />
+        <Button
+            Click="Increment_Quantity"
+            Content="+"
+            FontSize="25px"
+            FontWeight="ExtraBold"
+            Foreground="Green"
+            Height="60"
+            Margin="142,0,0,35"
+            Width="70"
+            x:Name="AnnulerButton" />
+
         <Button
             Click="Close_Window_Button"
             Content="Annuler"
+            FontWeight="Bold"
             Height="40"
-            Margin="400,100,0,0"
-            Width="90"
-            x:Name="AnnulerButton" />
+            Margin="0,150,250,0"
+            Width="70" />
+        <Button
+            Click="_ModifyQtn"
+            Content="Valider"
+            FontWeight="Bold"
+            Height="40"
+            Margin="250,150,0,0"
+            Width="70" />
     </Grid>
 </Window>
