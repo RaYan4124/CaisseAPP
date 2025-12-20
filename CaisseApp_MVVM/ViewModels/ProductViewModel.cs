@@ -24,6 +24,7 @@ public class ProductViewModel : INotifyPropertyChanged
     
     private Product _selectedProduct;
     private string _pad_value;
+    private int _quantity_to_add;
     public ObservableCollection<Product> Products
     {
         get { return _products; }
@@ -54,8 +55,10 @@ public class ProductViewModel : INotifyPropertyChanged
         get => _selectedProduct; //getter return the intern value 
         set
         {
-            _selectedProduct = value;   //for setting new product, the intern product take the new value with the twoway biding
+            _selectedProduct = value; //for setting new product, the intern product take the new value with the twoway biding
+            _quantity_to_add = value.Quantity;
             OnPropertyChanged(nameof(SelectedProduct)); //to notify the vue for the binding
+            OnPropertyChanged(nameof(QuantityToAdd));
         }
     }
     
@@ -69,6 +72,15 @@ public class ProductViewModel : INotifyPropertyChanged
         }
     }
 
+    public int QuantityToAdd
+    {
+        get => _quantity_to_add;
+        set
+        {
+            _quantity_to_add = value;
+            OnPropertyChanged(nameof(QuantityToAdd));
+        }
+    }
 
     public double TotalPrice
     {
@@ -121,8 +133,7 @@ public class ProductViewModel : INotifyPropertyChanged
 
     public void Modify_Qtn(int NewQtn)
     {
-        _selectedProduct.Quantity = NewQtn;
-        OnPropertyChanged(nameof(SelectedProduct));
+        SelectedProduct.Quantity = NewQtn;
         OnPropertyChanged(nameof(TotalPrice));
     }
 
@@ -160,14 +171,18 @@ public class ProductViewModel : INotifyPropertyChanged
 
     public void IncrementQuantity()
     {
-        SelectedProduct.Quantity++;
+        QuantityToAdd++;
     }
 
     public void DecrementQuantity()
     {
-        if (SelectedProduct.Quantity > 1)
+        if (QuantityToAdd > 1)
         {
-            SelectedProduct.Quantity--;
+            QuantityToAdd--;
+        }
+        else
+        {
+            QuantityToAdd = 1;
         }
     }
     
