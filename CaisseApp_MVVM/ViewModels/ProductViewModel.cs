@@ -23,6 +23,7 @@ public class ProductViewModel : INotifyPropertyChanged
     private ObservableCollection<Product> _research = new ObservableCollection<Product>();
     
     private Product _selectedProduct;
+    private Product _selectedProductFromSearch;
     private string _pad_value;
     private int _quantity_to_add;
     public ObservableCollection<Product> Products
@@ -52,13 +53,29 @@ public class ProductViewModel : INotifyPropertyChanged
     
     public Product SelectedProduct
     {
-        get => _selectedProduct; //getter return the intern value 
+        get => _selectedProduct; 
         set
         {
             _selectedProduct = value; //for setting new product, the intern product take the new value with the twoway biding
             _quantity_to_add = value.Quantity;
             OnPropertyChanged(nameof(SelectedProduct)); //to notify the vue for the binding
             OnPropertyChanged(nameof(QuantityToAdd));
+        }
+    }
+
+    public Product SelectedProductFromSearch
+    {
+        get => _selectedProductFromSearch;
+        set
+        {
+            _selectedProductFromSearch = value;
+            OnPropertyChanged(nameof(SelectedProductFromSearch));
+            if (_selectedProductFromSearch != null)
+            {
+                AddProduct(_selectedProductFromSearch.Id, _selectedProductFromSearch.Name, _selectedProductFromSearch.Price);
+            }
+
+            _selectedProductFromSearch = null;
         }
     }
     

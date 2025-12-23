@@ -23,7 +23,7 @@
             BorderBrush="Transparent"
             Height="100"
             ItemsSource="{Binding Research}"
-            SelectedItem="{Binding SelectedProductSearch, Mode=TwoWay}"
+            SelectedItem="{Binding SelectedProductFromSearch, Mode=TwoWay}"
             SelectionChanged="Close_Window_Button"
             x:Name="SearchingDataGrid">
             <!--  selectionchanged happen when  the selection of the controler change (when the item selected change)  and it hapen after the binding of selecteditem  -->
