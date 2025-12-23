@@ -17,7 +17,7 @@
             FontWeight="Bold"
             Height="60"
             Margin="0,0,0,35"
-            Text="{Binding QuantityToAdd}"
+            Text="{Binding NewQuantity}"
             TextAlignment="Center"
             VerticalContentAlignment="Center"
             Width="70"

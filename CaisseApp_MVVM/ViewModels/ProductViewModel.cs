@@ -25,7 +25,7 @@ public class ProductViewModel : INotifyPropertyChanged
     private Product _selectedProduct;
     private Product _selectedProductFromSearch;
     private string _pad_value;
-    private int _quantity_to_add;
+    private int _new_quantity;
     public ObservableCollection<Product> Products
     {
         get { return _products; }
@@ -57,9 +57,9 @@ public class ProductViewModel : INotifyPropertyChanged
         set
         {
             _selectedProduct = value; //for setting new product, the intern product take the new value with the twoway biding
-            _quantity_to_add = value.Quantity;
+            _new_quantity = value.Quantity;
             OnPropertyChanged(nameof(SelectedProduct)); //to notify the vue for the binding
-            OnPropertyChanged(nameof(QuantityToAdd));
+            OnPropertyChanged(nameof(NewQuantity));
         }
     }
 
@@ -73,9 +73,8 @@ public class ProductViewModel : INotifyPropertyChanged
             if (_selectedProductFromSearch != null)
             {
                 AddProduct(_selectedProductFromSearch.Id, _selectedProductFromSearch.Name, _selectedProductFromSearch.Price);
+                _selectedProductFromSearch = null;
             }
-
-            _selectedProductFromSearch = null;
         }
     }
     
@@ -89,13 +88,13 @@ public class ProductViewModel : INotifyPropertyChanged
         }
     }
 
-    public int QuantityToAdd
+    public int NewQuantity
     {
-        get => _quantity_to_add;
+        get => _new_quantity;
         set
         {
-            _quantity_to_add = value;
-            OnPropertyChanged(nameof(QuantityToAdd));
+            _new_quantity = value;
+            OnPropertyChanged(nameof(NewQuantity));
         }
     }
 
@@ -188,18 +187,18 @@ public class ProductViewModel : INotifyPropertyChanged
 
     public void IncrementQuantity()
     {
-        QuantityToAdd++;
+        NewQuantity++;
     }
 
     public void DecrementQuantity()
     {
-        if (QuantityToAdd > 1)
+        if (NewQuantity > 1)
         {
-            QuantityToAdd--;
+            NewQuantity--;
         }
         else
         {
-            QuantityToAdd = 1;
+            NewQuantity = 1;
         }
     }
     
