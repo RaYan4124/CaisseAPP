@@ -9,7 +9,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9ce2f011-b4d8-408c-9832-c983f8e9d1ae" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CaisseApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CaisseApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/View/SearchWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/View/SearchWindow.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/View/ModifyQuantity.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/View/ModifyQuantity.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/ViewModels/ProductViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/ViewModels/ProductViewModel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +61,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected=".NET Project.CaisseApp">
+  <component name="RunManager">
     <configuration name="CaisseApp" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/CaisseApp_MVVM/bin/Debug/net8.0-windows/CaisseApp_MVVM.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -118,7 +118,8 @@
       <workItem from="1766254593170" duration="3968000" />
       <workItem from="1766260032235" duration="5408000" />
       <workItem from="1766516546033" duration="757000" />
-      <workItem from="1766517364437" duration="1438000" />
+      <workItem from="1766517364437" duration="5009000" />
+      <workItem from="1766617146062" duration="2025000" />
     </task>
     <task id="LOCAL-00001" summary="imlementation of modify quantity function">
       <option name="closed" value="true" />
@@ -280,7 +281,23 @@
       <option name="project" value="LOCAL" />
       <updated>1766266141315</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="fixing searching fonctionality">
+      <option name="closed" value="true" />
+      <created>1766518859675</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1766518859675</updated>
+    </task>
+    <task id="LOCAL-00022" summary="changing property name for quantity to add">
+      <option name="closed" value="true" />
+      <created>1766520413510</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1766520413510</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,7 +327,9 @@
     <MESSAGE value="updating button's colors" />
     <MESSAGE value="modify quantity window layout" />
     <MESSAGE value="modify quantity ameliorations" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify quantity ameliorations" />
+    <MESSAGE value="fixing searching fonctionality" />
+    <MESSAGE value="changing property name for quantity to add" />
+    <option name="LAST_COMMIT_MESSAGE" value="changing property name for quantity to add" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

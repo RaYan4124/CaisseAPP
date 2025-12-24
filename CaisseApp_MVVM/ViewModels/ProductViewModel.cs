@@ -149,8 +149,11 @@ public class ProductViewModel : INotifyPropertyChanged
 
     public void Modify_Qtn(int NewQtn)
     {
-        SelectedProduct.Quantity = NewQtn;
-        OnPropertyChanged(nameof(TotalPrice));
+        if (NewQtn >= 1)
+        {
+            SelectedProduct.Quantity = NewQtn;
+            OnPropertyChanged(nameof(TotalPrice));
+        }
     }
 
     public void Searching(string s)

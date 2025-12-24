@@ -25,7 +25,7 @@ public partial class ModifyQuantity : Window
                 return;
             }else 
 
-            if (!int.TryParse(Newqtn.Text, out _newqtn) || _newqtn <= 0)
+            if (!int.TryParse(Newqtn.Text, out _newqtn))
             {
                 MessageBox.Show("Veillez Remplire Le Champs avec la bonne valeur", " ", MessageBoxButton.OK);
                 return;
