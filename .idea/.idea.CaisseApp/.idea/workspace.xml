@@ -8,8 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ce2f011-b4d8-408c-9832-c983f8e9d1ae" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/CaisseApp_MVVM/View/DiversProduct.xaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CaisseApp_MVVM/View/DiversProduct.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CaisseApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CaisseApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/ViewModels/ProductViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/ViewModels/ProductViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/View/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/View/MainWindow.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/View/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/View/MainWindow.xaml.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +37,9 @@
     &quot;accountId&quot;: &quot;e57cd30c-9bc7-49e0-b07e-03e782e57a74&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/CaisseApp_MVVM/View/DiversProduct.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="false" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -119,7 +125,7 @@
       <workItem from="1766516546033" duration="757000" />
       <workItem from="1766517364437" duration="5009000" />
       <workItem from="1766617146062" duration="4223000" />
-      <workItem from="1766688770215" duration="347000" />
+      <workItem from="1766688770215" duration="11067000" />
     </task>
     <task id="LOCAL-00001" summary="imlementation of modify quantity function">
       <option name="closed" value="true" />
@@ -305,7 +311,23 @@
       <option name="project" value="LOCAL" />
       <updated>1766619299797</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="update totalprice rules">
+      <option name="closed" value="true" />
+      <created>1766689148207</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1766689148207</updated>
+    </task>
+    <task id="LOCAL-00025" summary="updating padvalue rule">
+      <option name="closed" value="true" />
+      <created>1766695304654</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1766695304654</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,7 +360,9 @@
     <MESSAGE value="fixing searching fonctionality" />
     <MESSAGE value="changing property name for quantity to add" />
     <MESSAGE value="udpating rules" />
-    <option name="LAST_COMMIT_MESSAGE" value="udpating rules" />
+    <MESSAGE value="update totalprice rules" />
+    <MESSAGE value="updating padvalue rule" />
+    <option name="LAST_COMMIT_MESSAGE" value="updating padvalue rule" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

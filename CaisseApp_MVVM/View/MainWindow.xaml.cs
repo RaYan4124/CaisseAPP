@@ -96,5 +96,11 @@ namespace CaisseApp_MVVM.View
         {
             pvm.CorrectionPad();
         }
+
+        private void ShowDiversProduct(object sender, RoutedEventArgs routedEventArgs)
+        {
+            DiversProduct diversProduct = new DiversProduct();
+            diversProduct.ShowDialog();
+        }
     }
 }
