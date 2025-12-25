@@ -35,7 +35,7 @@ public class ProductViewModel : INotifyPropertyChanged
             {
                 _products = value;
                 OnPropertyChanged(nameof(Products));
-                OnPropertyChanged(nameof(TotalPrice)); //notify that TotalPrice must be recalculed
+                //OnPropertyChanged(nameof(TotalPrice)); //notify that TotalPrice must be recalculed
             }
 
         }
@@ -133,7 +133,6 @@ public class ProductViewModel : INotifyPropertyChanged
             existing.Quantity += QtnToAdd;
         }
         PadValue = string.Empty;
-        OnPropertyChanged(nameof(TotalPrice));
     }
 
     public void ShowProducts()
@@ -143,8 +142,6 @@ public class ProductViewModel : INotifyPropertyChanged
         {
             Products.Add(product);
         }
-
-        OnPropertyChanged(nameof(TotalPrice));
     }
 
     public void Modify_Qtn(int NewQtn)
@@ -175,7 +172,6 @@ public class ProductViewModel : INotifyPropertyChanged
         {
             Products.Remove(SelectedProduct);
         }
-        OnPropertyChanged(nameof(TotalPrice));
     }
     
     public void NumPad(string s)
