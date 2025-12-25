@@ -16,6 +16,7 @@
             FontSize="17px"
             FontWeight="Bold"
             Height="60"
+            IsReadOnly="True"
             Margin="0,0,0,35"
             Text="{Binding NewQuantity}"
             TextAlignment="Center"

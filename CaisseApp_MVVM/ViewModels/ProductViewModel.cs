@@ -122,7 +122,7 @@ public class ProductViewModel : INotifyPropertyChanged
     public void AddProduct(int id, string name, int price)
     {
         var existing = Products.FirstOrDefault(p => p.Id == id);
-        int QtnToAdd = String.IsNullOrEmpty(_pad_value) ? 1 : int.Parse(_pad_value);
+        int QtnToAdd = String.IsNullOrEmpty(PadValue) ? 1 : int.Parse(PadValue);
         if (existing == null)
         {
             Products.Add(new Product(id, name,
@@ -132,7 +132,7 @@ public class ProductViewModel : INotifyPropertyChanged
         {
             existing.Quantity += QtnToAdd;
         }
-        PadValue = string.Empty;
+        CorrectionPad();
     }
 
     public void ShowProducts()
