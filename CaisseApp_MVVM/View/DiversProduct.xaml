@@ -1,4 +1,5 @@
 ﻿<Window
+    Closed="divers_window_closed"
     Height="650"
     ResizeMode="NoResize"
     Title="DiversProduct"
@@ -18,9 +19,10 @@
             HorizontalContentAlignment="Center"
             IsReadOnly="True"
             Margin="0,0,0,515"
-            Text="10000"
+            Text="{Binding DiversValue}"
             VerticalContentAlignment="Center"
-            Width="500" />
+            Width="500"
+            x:Name="divers_price" />
 
         <Grid Margin="143,100,0,0">
             <Grid.RowDefinitions>
@@ -38,6 +40,7 @@
             <Button
                 Background="Transparent"
                 BorderThickness="1.5"
+                Click="NumPadDivers"
                 Content="1"
                 FontSize="30"
                 FontWeight="Bold"
@@ -49,6 +52,7 @@
             <Button
                 Background="Transparent"
                 BorderThickness="1.5"
+                Click="NumPadDivers"
                 Content="2"
                 FontSize="30"
                 FontWeight="Bold"
@@ -60,6 +64,7 @@
             <Button
                 Background="Transparent"
                 BorderThickness="1.5"
+                Click="NumPadDivers"
                 Content="3"
                 FontSize="30"
                 FontWeight="Bold"
@@ -71,6 +76,7 @@
             <Button
                 Background="Transparent"
                 BorderThickness="1.5"
+                Click="NumPadDivers"
                 Content="4"
                 FontSize="30"
                 FontWeight="Bold"
@@ -82,6 +88,7 @@
             <Button
                 Background="Transparent"
                 BorderThickness="1.5"
+                Click="NumPadDivers"
                 Content="5"
                 FontSize="30"
                 FontWeight="Bold"
@@ -93,6 +100,7 @@
             <Button
                 Background="Transparent"
                 BorderThickness="1.5"
+                Click="NumPadDivers"
                 Content="6"
                 FontSize="30"
                 FontWeight="Bold"
@@ -104,6 +112,7 @@
             <Button
                 Background="Transparent"
                 BorderThickness="1.5"
+                Click="NumPadDivers"
                 Content="7"
                 FontSize="30"
                 FontWeight="Bold"
@@ -115,6 +124,7 @@
             <Button
                 Background="Transparent"
                 BorderThickness="1.5"
+                Click="NumPadDivers"
                 Content="8"
                 FontSize="30"
                 FontWeight="Bold"
@@ -126,6 +136,7 @@
             <Button
                 Background="Transparent"
                 BorderThickness="1.5"
+                Click="NumPadDivers"
                 Content="9"
                 FontSize="30"
                 FontWeight="Bold"
@@ -137,6 +148,7 @@
             <Button
                 Background="Transparent"
                 BorderThickness="1.5"
+                Click="NumPadDivers"
                 Content="."
                 FontSize="30"
                 FontWeight="Bold"
@@ -148,6 +160,7 @@
             <Button
                 Background="Transparent"
                 BorderThickness="1.5"
+                Click="NumPadDivers"
                 Content="0"
                 FontSize="30"
                 FontWeight="Bold"
@@ -159,6 +172,7 @@
             <Button
                 Background="Transparent"
                 BorderThickness="1.5"
+                Click="NumPadDivers"
                 Content="00"
                 FontSize="30"
                 FontWeight="Bold"
@@ -169,12 +183,14 @@
                 Width="90" />
         </Grid>
         <Button
+            Click="divers_window_closed"
             Content="Annuler"
             FontWeight="Bold"
             Height="50"
             Margin="0,500,400,0"
             Width="90" />
         <Button
+            Click="divers_product"
             Content="Valider"
             FontWeight="Bold"
             Height="50"

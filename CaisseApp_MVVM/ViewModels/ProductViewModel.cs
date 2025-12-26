@@ -25,6 +25,7 @@ public class ProductViewModel : INotifyPropertyChanged
     private Product _selectedProduct;
     private Product _selectedProductFromSearch;
     private string _pad_value;
+    private string _divers_value;
     private int _new_quantity;
     public ObservableCollection<Product> Products
     {
@@ -35,7 +36,6 @@ public class ProductViewModel : INotifyPropertyChanged
             {
                 _products = value;
                 OnPropertyChanged(nameof(Products));
-                //OnPropertyChanged(nameof(TotalPrice)); //notify that TotalPrice must be recalculed
             }
 
         }
@@ -74,6 +74,7 @@ public class ProductViewModel : INotifyPropertyChanged
             {
                 AddProduct(_selectedProductFromSearch.Id, _selectedProductFromSearch.Name, _selectedProductFromSearch.Price);
                 _selectedProductFromSearch = null;
+                OnPropertyChanged(nameof(TotalPrice));
             }
         }
     }
@@ -85,6 +86,16 @@ public class ProductViewModel : INotifyPropertyChanged
         {
             _pad_value = value;
             OnPropertyChanged(nameof(PadValue));
+        }
+    }
+
+    public string DiversValue
+    {
+        get => _divers_value;
+        set
+        {
+            _divers_value = value;
+            OnPropertyChanged(nameof(DiversValue));
         }
     }
 
@@ -177,6 +188,23 @@ public class ProductViewModel : INotifyPropertyChanged
     public void NumPad(string s)
     {
         PadValue += s;
+    }
+
+    public void NumPadDivers(string s)
+    {
+        DiversValue += s;
+    }
+
+    public void DiversWindowClosed()
+    {
+        DiversValue = string.Empty;
+    }
+
+    public void DiversProduct(int p)
+    {
+        if (p <= 0) return;
+        var divers = new Product(0, "Divers", p);
+        Products.Add(divers);
     }
     
     public void CorrectionPad()

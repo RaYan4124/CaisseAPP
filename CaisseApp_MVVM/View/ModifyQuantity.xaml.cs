@@ -23,7 +23,7 @@ public partial class ModifyQuantity : Window
             {
                 MessageBox.Show("Veillez Remplire Correctement Le Champs", " ", MessageBoxButton.OK);
                 return;
-            }else 
+            }
 
             if (!int.TryParse(Newqtn.Text, out _newqtn))
             {

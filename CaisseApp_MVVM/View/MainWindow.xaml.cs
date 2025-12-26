@@ -99,7 +99,7 @@ namespace CaisseApp_MVVM.View
 
         private void ShowDiversProduct(object sender, RoutedEventArgs routedEventArgs)
         {
-            DiversProduct diversProduct = new DiversProduct();
+            DiversProduct diversProduct = new DiversProduct(pvm);
             diversProduct.ShowDialog();
         }
     }

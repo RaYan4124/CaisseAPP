@@ -8,11 +8,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ce2f011-b4d8-408c-9832-c983f8e9d1ae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CaisseApp_MVVM/View/DiversProduct.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CaisseApp_MVVM/View/DiversProduct.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CaisseApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CaisseApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/View/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/View/MainWindow.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/View/DiversProduct.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/View/DiversProduct.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/View/DiversProduct.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/View/DiversProduct.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/View/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/View/MainWindow.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/View/ModifyQuantity.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/View/ModifyQuantity.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/ViewModels/ProductViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/ViewModels/ProductViewModel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +67,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected=".NET Project.CaisseApp">
     <configuration name="CaisseApp" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/CaisseApp_MVVM/bin/Debug/net8.0-windows/CaisseApp_MVVM.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -125,7 +126,8 @@
       <workItem from="1766516546033" duration="757000" />
       <workItem from="1766517364437" duration="5009000" />
       <workItem from="1766617146062" duration="4223000" />
-      <workItem from="1766688770215" duration="11067000" />
+      <workItem from="1766688770215" duration="16540000" />
+      <workItem from="1766776743615" duration="4321000" />
     </task>
     <task id="LOCAL-00001" summary="imlementation of modify quantity function">
       <option name="closed" value="true" />
@@ -327,7 +329,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766695304654</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="DiversProduct Window UI">
+      <option name="closed" value="true" />
+      <created>1766702518364</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1766702518364</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,7 +347,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="imlementation of modify quantity function" />
     <MESSAGE value="set up of the numeric pad" />
     <MESSAGE value="implementation of modify quantity of a product with the numeric pad" />
     <MESSAGE value="adding remove product function and implementation of adding product that already exist in the list" />
@@ -362,7 +371,8 @@
     <MESSAGE value="udpating rules" />
     <MESSAGE value="update totalprice rules" />
     <MESSAGE value="updating padvalue rule" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating padvalue rule" />
+    <MESSAGE value="DiversProduct Window UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="DiversProduct Window UI" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
