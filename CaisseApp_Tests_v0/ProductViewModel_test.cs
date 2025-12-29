@@ -64,6 +64,19 @@ public class ProductViewModel_test
         Assert.Equal(p_test.Id, Pvm_Test.Products.First().Id);
         Assert.Equal(p_test.Price, Pvm_Test.Products.First().Price);
         Assert.Equal(p_test.Price * 2, Pvm_Test.TotalPrice);
+        
+        //Test With PadValue
+        Pvm_Test.Products.Clear();
+        Assert.Empty(Pvm_Test.Products);
+        p_test.Quantity = 1;
+        Pvm_Test.Products.Add(p_test);
+
+        Pvm_Test.PadValue = "23";
+        Pvm_Test.AddProduct(p_test.Id, p_test.Name, p_test.Price);
+        Assert.NotEmpty(Pvm_Test.Products);
+        Assert.Equal(24, Pvm_Test.Products.First().Quantity);
+        Assert.Equal(p_test.Price, Pvm_Test.Products.First().Price);
+        Assert.Equal(p_test.Price * 24, Pvm_Test.TotalPrice);
     }
 
     [Fact]
