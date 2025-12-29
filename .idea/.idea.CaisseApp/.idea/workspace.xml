@@ -9,11 +9,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9ce2f011-b4d8-408c-9832-c983f8e9d1ae" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CaisseApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CaisseApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/View/DiversProduct.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/View/DiversProduct.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/View/DiversProduct.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/View/DiversProduct.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/View/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/View/MainWindow.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/View/ModifyQuantity.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/View/ModifyQuantity.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaisseApp_MVVM/ViewModels/ProductViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_MVVM/ViewModels/ProductViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaisseApp_Tests_v0/ProductViewModel_test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CaisseApp_Tests_v0/ProductViewModel_test.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +124,8 @@
       <workItem from="1766517364437" duration="5009000" />
       <workItem from="1766617146062" duration="4223000" />
       <workItem from="1766688770215" duration="16540000" />
-      <workItem from="1766776743615" duration="4321000" />
+      <workItem from="1766776743615" duration="7177000" />
+      <workItem from="1767036774046" duration="2071000" />
     </task>
     <task id="LOCAL-00001" summary="imlementation of modify quantity function">
       <option name="closed" value="true" />
@@ -337,7 +335,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766702518364</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="adding DiversProduct functionality">
+      <option name="closed" value="true" />
+      <created>1766782404455</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1766782404455</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,7 +353,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="set up of the numeric pad" />
     <MESSAGE value="implementation of modify quantity of a product with the numeric pad" />
     <MESSAGE value="adding remove product function and implementation of adding product that already exist in the list" />
     <MESSAGE value="implementation of correction num pad function and button" />
@@ -372,7 +377,8 @@
     <MESSAGE value="update totalprice rules" />
     <MESSAGE value="updating padvalue rule" />
     <MESSAGE value="DiversProduct Window UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="DiversProduct Window UI" />
+    <MESSAGE value="adding DiversProduct functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding DiversProduct functionality" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
