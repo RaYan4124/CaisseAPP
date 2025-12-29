@@ -11,15 +11,6 @@ public class ProductViewModel_test
     public Random rand = new Random();
     
     [Fact]
-    public void Modify_Qtn_test()
-    {
-        int x = rand.Next(50);
-        Pvm_Test.SelectedProduct = p_test;
-        Pvm_Test.Modify_Qtn(x);
-        Assert.Equal(x, Pvm_Test.SelectedProduct.Quantity);
-    }
-
-    [Fact]
     public void AddProduct_emptyListCase_test()
     {
         Pvm_Test.Products.Clear();
@@ -77,6 +68,20 @@ public class ProductViewModel_test
         Assert.Equal(24, Pvm_Test.Products.First().Quantity);
         Assert.Equal(p_test.Price, Pvm_Test.Products.First().Price);
         Assert.Equal(p_test.Price * 24, Pvm_Test.TotalPrice);
+    }
+    
+    [Fact]
+    public void Modify_Qtn_test()
+    {
+        int x = rand.Next(50);
+        Pvm_Test.Products.Clear();
+        Assert.Empty(Pvm_Test.Products);
+        Pvm_Test.AddProduct(p_test.Id, p_test.Name, p_test.Price);
+        
+        Pvm_Test.SelectedProduct = Pvm_Test.Products.First();
+        Pvm_Test.Modify_Qtn(x);
+        Assert.Equal(x, Pvm_Test.SelectedProduct.Quantity);
+        Assert.Equal(p_test.Price * x, Pvm_Test.TotalPrice);
     }
 
     [Fact]
