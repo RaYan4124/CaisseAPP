@@ -1,7 +1,7 @@
 ﻿using CaisseApp_MVVM.ViewModels;
 using Models;
 
-namespace CaisseApp_Tests_v0;
+namespace CaisseApp_Tests_V1;
 
 public class ProductViewModel_test
 {
@@ -135,5 +135,21 @@ public class ProductViewModel_test
         {
             db_test.DeleteProduct(999999999);
         } 
+    }
+
+    [Fact]
+    public void DiversProduct_test()
+    {
+        Pvm_Test.Products.Clear();
+        Assert.Empty(Pvm_Test.Products);
+        Pvm_Test.DiversProduct(50);
+        
+        Assert.NotEmpty(Pvm_Test.Products);
+        Assert.Single(Pvm_Test.Products);
+        Assert.Equal(0, Pvm_Test.Products.First().Id);
+        Assert.Equal("Divers", Pvm_Test.Products.First().Name);
+        Assert.Equal(50, Pvm_Test.Products.First().Price);
+        Assert.Equal(1, Pvm_Test.Products.First().Quantity);
+        Assert.Equal(50, Pvm_Test.TotalPrice);
     }
 }

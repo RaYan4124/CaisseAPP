@@ -1,7 +1,7 @@
 ﻿using CaisseApp_MVVM;
 using Models;
 
-namespace CaisseApp_Tests_v0;
+namespace CaisseApp_Tests_V1;
 
 public class DB_Helper_Test
 {

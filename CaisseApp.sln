@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaisseApp_MVVM", "CaisseApp_MVVM\CaisseApp_MVVM.csproj", "{08429000-6F0B-4117-A351-9166CB105D75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaisseApp_Tests_v0", "CaisseApp_Tests_v0\CaisseApp_Tests_v0.csproj", "{EF10BFC1-286C-4A2C-BD00-ACB58F69E54D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaisseApp_Tests_V1", "CaisseApp_Tests_V1\CaisseApp_Tests_V1.csproj", "{EF10BFC1-286C-4A2C-BD00-ACB58F69E54D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

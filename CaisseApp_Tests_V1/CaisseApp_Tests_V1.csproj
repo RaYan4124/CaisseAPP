@@ -5,6 +5,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <IsPackable>false</IsPackable>
+        <RootNamespace>CaisseApp_Tests_v0</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
